@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Psycho League Compare</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="controls">
+      <label>Username:
+        <input id="usernameInput" type="text" />
+      </label>
+
+      <label>Season:
+        <input id="seasonInput" type="text" />
+      </label>
+
+      <label>League:
+        <select id="leagueSelect"></select>
+      </label>
+
+      <button id="reloadBtn">Reload</button>
+    </div>
+
+    <div id="status" class="status">Ready</div>
+  </div>
+
+  <div class="layout">
+    <aside class="teamsPane">
+      <div class="paneTitle">Teams</div>
+      <ul id="teams" class="teamsList"></ul>
+    </aside>
+
+    <section class="tablePane">
+      <div class="tableTitle" id="leftTitle">Left Roster</div>
+      <div class="tableScroll">
+        <table id="leftTable">
+          <thead>
+            <tr>
+              <th class="pos">Pos</th>
+              <th class="player">Player</th>
+              <th class="yrs">Yrs</th>
+              <th class="pts">Pts</th>
+              <th class="gp">GP</th>
+              <th class="avg">Avg</th>
+              <th class="nfl">NFL</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tablePane">
+      <div class="tableTitle" id="rightTitle">Right Roster</div>
+      <div class="tableScroll">
+        <table id="rightTable">
+          <thead>
+            <tr>
+              <th class="pos">Pos</th>
+              <th class="player">Player</th>
+              <th class="yrs">Yrs</th>
+              <th class="pts">Pts</th>
+              <th class="gp">GP</th>
+              <th class="avg">Avg</th>
+              <th class="nfl">NFL</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
