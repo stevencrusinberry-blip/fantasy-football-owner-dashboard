@@ -1,29 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Psycho League Compare</title>
 
-  <!-- Styles / Scripts -->
+  <title>Fantasy Football Owner Dashboard</title>
+
+  <!-- Styles & App Script -->
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 
-  <!-- PWA -->
+  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#2563eb">
 
-  <!-- iOS PWA Support -->
+  <!-- App Icon (iOS + PWA) -->
+  <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+
+  <!-- PWA / iOS Settings -->
+  <meta name="theme-color" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Owner Dash">
 
-  <!-- iOS Home Screen Icon (IMPORTANT) -->
-  <link rel="apple-touch-icon" href="icons/icon-180-v2.png">
 </head>
 
 <body>
+
+  <!-- ===== Top Bar ===== -->
   <div class="topbar">
     <div class="controls">
       <label>
@@ -47,12 +50,16 @@
     <div id="status" class="status">Ready</div>
   </div>
 
+  <!-- ===== Main Layout ===== -->
   <div class="layout">
+
+    <!-- Teams / Owners -->
     <aside class="teamsPane">
       <div class="paneTitle">Teams</div>
       <ul id="teams" class="teamsList"></ul>
     </aside>
 
+    <!-- Left Roster -->
     <section class="tablePane">
       <div class="tableTitle" id="leftTitle">Left Roster</div>
       <div class="tableScroll">
@@ -73,6 +80,7 @@
       </div>
     </section>
 
+    <!-- Right Roster -->
     <section class="tablePane">
       <div class="tableTitle" id="rightTitle">Right Roster</div>
       <div class="tableScroll">
@@ -92,9 +100,10 @@
         </table>
       </div>
     </section>
+
   </div>
 
-  <!-- Service Worker -->
+  <!-- ===== Service Worker Registration ===== -->
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
@@ -104,5 +113,6 @@
       });
     }
   </script>
+
 </body>
 </html>
